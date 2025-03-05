@@ -3,5 +3,35 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  <display-name> Web Application</display-name>
+
+  <servlet>
+    <servlet-name>loginservlet</servlet-name>
+    <servlet-class>com.backend.loginServlet</servlet-class>
+    <init-param>
+      <param-name>adminUser</param-name>
+      <param-value>admin</param-value>
+    </init-param>
+    <init-param>
+      <param-name>adminPass</param-name>
+      <param-value>admin123</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+
+
+  <servlet>
+    <servlet-name>feedbackservlet</servlet-name>
+    <servlet-class>com.backend.feedbackServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>feedbackservlet</servlet-name>
+  <url-pattern>/feedback</url-pattern>
+</servlet-mapping>
+
+
 </web-app>
